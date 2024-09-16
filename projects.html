@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Varisha Mohsin</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #e1e1e3;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+
+        body.light-mode {
+            background-color: #e1e1e3;
+            color: #333;
+        }
+
+        header.light-mode {
+            background-color: #e1e1e3;
+            border-bottom: 1px solid #e1e1e3;
+        }
+
+        footer.light-mode {
+            background-color: #e1e1e3;
+            border-top: 1px solid #e1e1e3;
+        }
+
+        body.dark-mode {
+            background-color: #555;
+            color: #fff;
+        }
+
+        header.dark-mode {
+            background-color: #444;
+            border-bottom: 1px solid #444;
+        }
+
+        footer.dark-mode {
+            background-color: #444;
+            border-top: 1px solid #444;
+        }
+
+        .intro-box.dark-mode, .contact-me.dark-mode, .content-section.dark-mode {
+            background-color: #555;
+            border: 2px solid #555;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #fff0ff;
+            border-bottom: 1px solid #fff0ff;
+            transition: background-color 0.3s ease;
+        }
+
+        header:hover {
+            background-color: #efcee3;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #ff69b4;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        header:hover h1 {
+            color: #e91e63;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        nav a img {
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover img {
+            transform: scale(1.2);
+        }
+
+        nav a:hover {
+            color: #e91e63;
+            transform: translateY(-3px);
+        }
+
+        .content-section {
+            text-align: left;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .content-section:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .content-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #ff69b4;
+            transition: color 0.3s ease;
+        }
+
+        .content-section:hover h2 {
+            color: #e91e63;
+        }
+
+        .content-section p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #e1e1e3;
+            border-top: 1px solid #e1e1e3;
+            position: relative;
+        }
+
+        footer p {
+            color: #ff69b4;
+        }
+
+        footer.dark-mode p {
+            color: #ff69b4;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(90deg, #e91e63, #a64ca6);
+            border-radius: 5px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            nav {
+                margin-top: 15px;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            nav a {
+                margin: 10px 0;
+                font-size: 16px;
+            }
+
+            .content-section {
+                max-width: 100%;
+                margin: 10px auto;
+                padding: 15px;
+            }
+
+            .content-section h2 {
+                font-size: 20px;
+            }
+
+            footer {
+                padding: 20px;
+            }
+
+            footer p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 onclick="window.location.href='index.html'">Varisha Mohsin ˖ . ݁𝜗𝜚. ݁₊</h1>
+        <nav>
+            <a href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Home">Home
+            </a>
+            <a href="education.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3235/3235733.png" alt="Education">Education
+            </a>
+            <a href="skills.html">
+                <img src="https://png.pngtree.com/png-vector/20230412/ourmid/pngtree-key-skills-line-icon-vector-png-image_6703008.png" alt="Skills">Skills
+            </a>
+            <a href="projects.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/2920/2920304.png" alt="Projects">Projects
+            </a>
+            <a href="experience.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3504/3504016.png" alt="Experience">Experience
+            </a>
+            <button id="modeToggle" aria-label="Toggle light/dark mode">
+                🌙
+            </button>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <section id="projects" class="content-section">
+            <h2>Projects</h2>
+            <p><strong>Project 1:</strong> StudyBot - A Discord bot for managing study tasks + includes Pomodoro timer (and many other fun features aimed for students) (CURRENTLY WORKING ON).</p>
+            <p><strong>Project 2:</strong> Personal Website - A responsive portfolio site as an introduction about me (HTML + CSS + Javascript).</p>
+            <p><strong>Project 3:</strong> A cooking website - A fun personal website that stores my mothers recipes! (HTML + CSS + Javascript)</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© Made with Javascript, HTML + CSS - ˏˋ°•*⁀➷ by Varisha </p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('modeToggle');
+        const body = document.body;
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        if (localStorage.getItem('mode') === 'dark') {
+            body.classList.add('dark-mode');
+            header.classList.add('dark-mode');
+            footer.classList.add('dark-mode');
+            toggleButton.textContent = '🌕'; 
+        } else {
+            body.classList.add('light-mode');
+            header.classList.add('light-mode');
+            footer.classList.add('light-mode');
+            toggleButton.textContent = '🌙'; 
+        }
+    
+        toggleButton.addEventListener('click', () => {
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                header.classList.remove('light-mode');
+                header.classList.add('dark-mode');
+                footer.classList.remove('light-mode');
+                footer.classList.add('dark-mode');
+                toggleButton.textContent = '🌕';
+                localStorage.setItem('mode', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                header.classList.remove('dark-mode');
+                header.classList.add('light-mode');
+                footer.classList.remove('dark-mode');
+                footer.classList.add('light-mode');
+                toggleButton.textContent = '🌙'; 
+                localStorage.setItem('mode', 'light');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varisha Mohsin - Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e1e1e3;
+            color: #ff69b4;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* Header styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #e1e1e3;
+            border-bottom: 1px solid #e1e1e3;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            transition: background-color 0.5s ease;
+        }
+
+        header:hover {
+            background-color: #dadadc;
+        }
+
+        header h1 {
+            font-size: 26px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header:hover h1 {
+            transform: scale(1.05);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff69b4;
+            transform: scale(1.1);
+        }
+
+        nav a img {
+            margin-right: 8px;
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover img {
+            transform: rotate(20deg);
+        }
+
+        /* Section styling */
+        section {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .intro h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ff69b4;
+            font-weight: bold;
+            animation: fadeInUp 1s ease forwards;
+            opacity: 0;
+        }
+
+        .intro-box {
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: #e1e1e3;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeInBox 1.5s ease forwards;
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        .intro-box:hover {
+            background-color: #fce8f9;
+            transform: scale(1.05);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInBox {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .contact-me {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #e1e1e3;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 30px auto;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-me:hover {
+            background-color: #ffe6f9;
+            transform: scale(1.02);
+        }
+
+        .contact-me h2 {
+            margin-bottom: 20px;
+            color: #ff69b4;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .contact-me p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .contact-me form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff1493;
+        }
+
+        .intro p {
+            font-size: 20px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            opacity: 0;
+            animation: fadeInUp 2s ease forwards;
+        }
+
+        .icon-row a {
+            margin: 0 15px;
+        }
+
+        .icon-row img {
+            width: 45px;
+            height: 45px;
+            opacity: 0.8;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .icon-row img:hover {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .skill-carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .skill-carousel img {
+            width: 100px;
+            height: 100px;
+            transition: transform 0.5s ease-in-out;
+            opacity: 0;
+            animation: fadeInUp 2.5s ease forwards;
+        }
+
+        .skill-carousel h3 {
+            margin-top: 15px;
+            font-size: 24px;
+            color: #333;
+            opacity: 0;
+            animation: fadeInUp 3s ease forwards;
+        }
+
+        .arrow {
+            font-size: 30px;
+            color: #ff69b4;
+            background: none;
+            border: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .arrow:hover {
+            color: #ff69b4;
+            transform: scale(1.2);
+        }
+
+        .arrow.left {
+            left: 0;
+        }
+
+        .arrow.right {
+            right: 0;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #e1e1e3;
+            border-top: 1px solid #e1e1e3;
+        }
+
+        footer a {
+            color: #ff69b4;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+                font-size: 16px;
+            }
+
+            .intro h2 {
+                font-size: 28px;
+            }
+
+            .intro-box {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .contact-me {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+            }
+
+            .skill-carousel img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .skill-carousel h3 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            nav ul li {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .intro h2 {
+                font-size: 24px;
+            }
+
+            .intro-box {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .contact-me {
+                width: 95%;
+                padding: 10px;
+            }
+
+            .skill-carousel img {
+                width: 70px;
+                height: 70px;
+            }
+
+            .skill-carousel h3 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+</html>
+
+        <header>
+            <h1>Varisha Mohsin ˖ . ݁𝜗𝜚. ݁₊</h1>
+            <nav>
+                <a href="index.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Home">Home
+                </a>
+                <a href="education.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3235/3235733.png" alt="Education">Education
+                </a>
+                <a href="skills.html">
+                    <img src="https://png.pngtree.com/png-vector/20230412/ourmid/pngtree-key-skills-line-icon-vector-png-image_6703008.png" alt="Skills">Skills
+                </a>
+                <a href="projects.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2920/2920304.png" alt="Projects">Projects
+                </a>
+                <a href="experience.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3504/3504016.png" alt="Experience">Experience
+                </a>
+            </nav>
+        </header>
+    
+        <section class="intro">
+            <h2>─── ⋆⋅☆⋅⋆ ───</h2>
+            <div class="intro-box">
+                <p>I am a 17-year-old (Year 13 student) aspiring Computer Scientist with a deep passion for Artificial Intelligence, Computing, and problem-solving. I have completed numerous projects that reflect my dedication towards this field and my enthusiasm for technology. I am also committed to promoting diversity in STEM. As I advance in my career, I am actively seeking new opportunities to apply my skills, grow professionally, and contribute to the field of Computer Science. Feel free to reach out if you’d like to connect, share insights, or collaborate!</p>
+                <p>Please scroll down if you want to contact me!</p>
+
+                
+        
+                <div class="icon-row">
+                    <a href="https://github.com/varishaaa" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/varisha-m-34b4a3297/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/v4risha/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    
+        <section class="skill-carousel">
+            <button class="arrow left" onclick="prevSkill()">&#8249;</button>
+            <div id="skillDisplay">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" id="skillIcon">
+                <h3 id="skillName">Python</h3>
+            </div>
+            <button class="arrow right" onclick="nextSkill()">&#8250;</button>
+        </section>
+        <script>
+            const skills = [
+                {
+                    name: 'Python',
+                    img: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg'
+                },
+                {
+                    name: 'HTML & CSS',
+                    img: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg'
+                },
+                {
+                    name: 'JavaScript',
+                    img: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png'
+                },
+                {
+                    name: 'C#',
+                    img: 'https://upload.wikimedia.org/wikipedia/commons/1/17/C_Sharp_Icon.png'
+                },
+                {
+                    name: 'Visual Basic (.NET)',
+                    img: 'https://www.svgrepo.com/show/508945/vbnet.svg'
+                }
+            ];
+    
+            let currentSkillIndex = 0;
+    
+            function showSkill(index) {
+                const skill = skills[index];
+                document.getElementById("skillIcon").src = skill.img;
+                document.getElementById("skillName").textContent = skill.name;
+            }
+    
+            function nextSkill() {
+                currentSkillIndex = (currentSkillIndex + 1) % skills.length;
+                showSkill(currentSkillIndex);
+            }
+    
+            function prevSkill() {
+                currentSkillIndex = (currentSkillIndex - 1 + skills.length) % skills.length;
+                showSkill(currentSkillIndex);
+            }     
+            showSkill(currentSkillIndex);
+            setInterval(nextSkill, 3000);
+            document.querySelector('.arrow.right').addEventListener('click', nextSkill);
+            document.querySelector('.arrow.left').addEventListener('click', prevSkill);
+        </script>
+    
+    
+        <div class="contact-me">
+            <h2>Contact Me</h2>
+            <p>If you have any questions...</p>
+            <form action="mailto:varisha.mohsin@hotmail.co.uk" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    
+        <footer>
+            <p>© Made with Javascript, HTML + CSS - ˏˋ°•*⁀➷ by Varisha</p>
+        </footer>
+    
+    </body>
+    </html>
+    

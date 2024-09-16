@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Varisha Mohsin</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-family: Arial, sans-serif;
+        }
+
+        body.light-mode {
+            background-color: #e1e1e3; /* Light gray background */
+            color: #333;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #e1e1e3; /* Light gray header */
+            border-bottom: 1px solid #e1e1e3;
+            transition: background-color 0.3s ease;
+        }
+
+        header.dark-mode {
+            background-color: #444;
+            border-bottom: 1px solid #444;
+        }
+
+        header:hover {
+            background-color: #efcee3; /* Ensure hover state remains light gray */
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #ff69b4;
+            transition: color 0.3s ease;
+        }
+
+        header.dark-mode h1 {
+            color: #e91e63;
+        }
+
+        header:hover h1 {
+            color: #e91e63;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a img {
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease, animation 0.3s ease;
+        }
+
+        nav a:hover img {
+            animation: bounce 0.6s ease forwards;
+        }
+
+        nav a:hover {
+            color: #e91e63;
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .content-wrapper {
+            flex: 1;
+            padding: 20px;
+        }
+
+        section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .experience-image {
+            width: 220px; /* Adjust the size as needed */
+            height: auto;
+            margin-left: 70px;
+            vertical-align: middle; /* Aligns image with text */
+        }
+
+        @media only screen and (max-width: 768px) {
+            .experience-image {
+                width: 100px; /* Smaller size for mobile screens */
+                margin-left: 5px;
+            }
+        }
+
+        .content-section {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #e1e1e3; /* Light gray background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .content-section.dark-mode {
+            background-color: #555;
+            border: 2px solid #666;
+            color: #fff;
+        }
+
+        .content-section:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .content-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #e91e63;
+            transition: color 0.3s ease;
+        }
+
+        .content-section.dark-mode h2 {
+            color: #e91e63;
+        }
+
+        .content-section p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .content-section.dark-mode p {
+            color: #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #e1e1e3; /* Light gray footer */
+            border-top: 1px solid #fff0ff;
+            position: relative;
+        }
+
+        footer.dark-mode {
+            background-color: #444;
+            border-top: 1px solid #444;
+        }
+
+        footer p {
+            color: #777;
+        }
+
+        footer.dark-mode p {
+            color: #ccc;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(90deg, #e91e63, #a64ca6);
+            border-radius: 5px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            nav {
+                margin-top: 15px;
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+
+            .experience-image {
+                width: 80px; /* Smaller size for mobile screens */
+                margin-left: 0;
+                display: block;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Varisha Mohsin ˖ . ݁𝜗𝜚. ݁₊</h1>
+        <nav>
+            <a href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Home">Home
+            </a>
+            <a href="education.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3235/3235733.png" alt="Education">Education
+            </a>
+            <a href="skills.html">
+                <img src="https://png.pngtree.com/png-vector/20230412/ourmid/pngtree-key-skills-line-icon-vector-png-image_6703008.png" alt="Skills">Skills
+            </a>
+            <a href="projects.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/2920/2920304.png" alt="Projects">Projects
+            </a>
+            <a href="experience.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3504/3504016.png" alt="Experience">Experience
+            </a>
+            <button id="modeToggle" aria-label="Toggle light/dark mode">
+                🌙
+            </button>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <section id="experience" class="content-section">
+            <h2>Computing Work Experience</h2>
+            <p><strong>Role:</strong> Work Experience at DV Telecom Service</p>
+            <p><strong>Duration:</strong> June 2022 - June 2022</p>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Explored network infrastructure and management.</li>
+                <li>Assisted in troubleshooting and optimizing network performance.</li>
+                <li>Documented and reported findings to senior engineers.</li>
+            </ul>
+        
+            <h2>Finance Work Experience</h2>
+            <p><strong>Role:</strong> Work Experience at AON</p>
+            <p><strong>Duration:</strong> July 2024 - July 2024</p>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Built an understanding of the company, through learning about the different sectors within Aon.</li>
+                <li>Sessions on networking, CV and interviewing skills, and personal branding.</li>
+                <li>Held a group presentation and presented it publicly.</li>
+            </ul>
+            <div class="image-gallery">
+                <img src="C:\Users\mohsi\OneDrive\Public\Pictures\aon image.png" class="experience-image" alt="AON Image 1">
+                <img src="C:\Users\mohsi\OneDrive\Public\Pictures\Camera Roll\aon pres.JPG" class="experience-image" alt="AON Presentation">
+                <img src="C:\Users\mohsi\OneDrive\Public\Pictures\Camera Roll\certif.JPG" class="experience-image" alt="AON Certificate">
+                <img src="C:\Users\mohsi\OneDrive\Public\Pictures\Camera Roll\aon pic.JPG" class="experience-image" alt="AON Picture">
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>© Made with Javascript, HTML + CSS - ˏˋ°•*⁀➷ by Varisha</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('modeToggle');
+        const body = document.body;
+        const header = document.querySelector('header');
+        const footer = document.querySelector('footer');
+        const contentSection = document.querySelector('.content-section');
+
+        function applyMode(mode) {
+            if (mode === 'dark') {
+                body.classList.add('dark-mode');
+                header.classList.add('dark-mode');
+                footer.classList.add('dark-mode');
+                contentSection.classList.add('dark-mode');
+                toggleButton.textContent = '🌕'; 
+                localStorage.setItem('mode', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                header.classList.remove('dark-mode');
+                footer.classList.remove('dark-mode');
+                contentSection.classList.remove('dark-mode');
+                toggleButton.textContent = '🌙'; 
+                localStorage.setItem('mode', 'light');
+            }
+        }
+
+        const savedMode = localStorage.getItem('mode');
+        applyMode(savedMode || 'light');
+
+        toggleButton.addEventListener('click', () => {
+            const isDarkMode = body.classList.contains('dark-mode');
+            applyMode(isDarkMode ? 'light' : 'dark');
+        });
+    </script>
+</body>
+</html>
+

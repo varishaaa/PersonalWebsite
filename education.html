@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Varisha Mohsin</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e1e1e3;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #e1e1e3; /* light gray */
+            border-bottom: 1px solid #ff69b4; /* hot pink */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #ff69b4;
+            transition: color 0.3s ease;
+        }
+
+        header:hover h1 {
+            color: #ff69b4; /* hot pink */
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        nav a img {
+            margin-right: 8px;
+            width: 20px; /* Adjust image size for smaller screens */
+            height: 20px;
+            opacity: 0.8;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        nav a:hover img {
+            transform: rotate(360deg);
+            opacity: 1;
+        }
+
+        section {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .content-section {
+            text-align: center;
+            max-width: 90%; /* Adjust width for smaller screens */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px; /* Adjust font size */
+            color: #ff69b4; /* hot pink */
+            text-transform: uppercase;
+        }
+
+        .content-section ul {
+            font-size: 18px; /* Adjust font size */
+            color: #333;
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .content-section ul li {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #fff;
+            border: 2px solid #ff69b4; /* hot pink */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-section ul li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            background-color: #ffebfe;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #e1e1e3; /* light gray */
+            border-top: 2px solid #e1e1e3; /* hot pink */
+            margin-top: 30px;
+            font-size: 14px; /* Adjust font size for mobile */
+        }
+
+        footer p {
+            color: #777;
+        }
+
+        footer:hover p {
+            color: #ff69b4; /* hot pink */
+        }
+
+        /* Light mode and dark mode toggling */
+        body.light-mode {
+            background-color: #e1e1e3;
+            color: #333;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        header.light-mode {
+            background-color: #e1e1e3; /* light gray */
+            border-bottom: 1px solid #ff69b4;
+        }
+
+        header.dark-mode {
+            background-color: #444;
+            border-bottom: 1px solid #ff69b4;
+        }
+
+        /* Mobile view adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+                text-align: center;
+            }
+            
+            nav {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+            }
+            
+            nav a {
+                margin: 10px 0;
+            }
+            
+            #modeToggle {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Varisha Mohsin˖ . ݁𝜗𝜚. ݁₊</h1>
+        <nav>
+            <a href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Home">Home
+            </a>
+            <a href="education.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3235/3235733.png" alt="Education">Education
+            </a>
+            <a href="skills.html">
+                <img src="https://png.pngtree.com/png-vector/20230412/ourmid/pngtree-key-skills-line-icon-vector-png-image_6703008.png" alt="Skills">Skills
+            </a>
+            <a href="projects.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/2920/2920304.png" alt="Projects">Projects
+            </a>
+            <a href="experience.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/3504/3504016.png" alt="Experience">Experience
+            </a>
+            <button id="modeToggle" aria-label="Toggle light/dark mode">
+                🌙
+            </button>
+        </nav>
+    </header>
+
+    <section class="content-section">
+        <h2>Education</h2>
+        <p>♪♫•*¨*•.¸¸❤¸¸.•*¨*•♫♪</p>
+        <p>A Levels: Collingwood College</p>
+        <ul>
+            <li>Mathematics  ➛ Edexcel</li>
+            <li>Computer Science  ➛ AQA</li>
+            <li>Physics  ➛ AQA</li>
+            <li> Aiming for A*A*A </li>
+        </ul>
+    </section>
+
+    <script>
+        const toggleButton = document.getElementById('modeToggle');
+        const body = document.body;
+        const header = document.querySelector('header');
+        if (localStorage.getItem('mode') === 'dark') {
+            body.classList.add('dark-mode');
+            header.classList.add('dark-mode');
+            toggleButton.textContent = '🌕'; 
+        } else {
+            body.classList.add('light-mode');
+            header.classList.add('light-mode');
+            toggleButton.textContent = '🌙'; 
+        }
+    
+        toggleButton.addEventListener('click', () => {
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                header.classList.remove('light-mode');
+                header.classList.add('dark-mode');
+                toggleButton.textContent = '🌕'; 
+                localStorage.setItem('mode', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                header.classList.remove('dark-mode');
+                header.classList.add('light-mode');
+                toggleButton.textContent = '🌙'; 
+                localStorage.setItem('mode', 'light');
+            }
+        });
+    </script>
+
+    <footer>
+        <p>© Made with Javascript, HTML + CSS - ˏˋ°•*⁀➷ by Varisha</p>
+    </footer>
+</body>
+</html>
+
+
+
