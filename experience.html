@@ -1,309 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - Varisha Mohsin</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            font-family: Arial, sans-serif;
-        }
-
-        body.light-mode {
-            background-color: #e1e1e3; 
-            color: #333;
-        }
-
-        body.dark-mode {
-            background-color: #333;
-            color: #fff;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background-color: #e1e1e3; 
-            border-bottom: 1px solid #e1e1e3;
-            transition: background-color 0.3s ease;
-        }
-
-        header.dark-mode {
-            background-color: #444;
-            border-bottom: 1px solid #444;
-        }
-
-        header:hover {
-            background-color: #efcee3;
-        }
-
-        header h1 {
-            font-size: 28px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            color: #ff69b4;
-            transition: color 0.3s ease;
-        }
-
-        header.dark-mode h1 {
-            color: #e91e63;
-        }
-
-        header:hover h1 {
-            color: #e91e63;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            position: relative;
-            transition: color 0.3s ease;
-        }
-
-        nav a img {
-            margin-right: 8px;
-            width: 20px;
-            height: 20px;
-            transition: transform 0.3s ease, animation 0.3s ease;
-        }
-
-        nav a:hover img {
-            animation: bounce 0.6s ease forwards;
-        }
-
-        nav a:hover {
-            color: #e91e63;
-        }
-
-        @keyframes bounce {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
-
-        .content-wrapper {
-            flex: 1;
-            padding: 20px;
-        }
-
-        section {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .experience-image {
-            width: 220px; 
-            height: auto;
-            margin-left: 70px;
-            vertical-align: middle;
-        }
-
-        @media only screen and (max-width: 768px) {
-            .experience-image {
-                width: 100px; 
-                margin-left: 5px;
-            }
-        }
-
-        .content-section {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #e1e1e3; /* Light gray background */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .content-section.dark-mode {
-            background-color: #555;
-            border: 2px solid #666;
-            color: #fff;
-        }
-
-        .content-section:hover {
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-            transform: translateY(-5px);
-        }
-
-        .content-section h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #e91e63;
-            transition: color 0.3s ease;
-        }
-
-        .content-section.dark-mode h2 {
-            color: #e91e63;
-        }
-
-        .content-section p {
-            font-size: 18px;
-            color: #555;
-        }
-
-        .content-section.dark-mode p {
-            color: #ddd;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #e1e1e3; 
-            border-top: 1px solid #fff0ff;
-            position: relative;
-        }
-
-        footer.dark-mode {
-            background-color: #444;
-            border-top: 1px solid #444;
-        }
-
-        footer p {
-            color: #777;
-        }
-
-        footer.dark-mode p {
-            color: #ccc;
-        }
-
-        footer::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 10px;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 5px;
-            background: linear-gradient(90deg, #e91e63, #a64ca6);
-            border-radius: 5px;
-        }
-
-        @media only screen and (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 15px;
-            }
-
-            nav {
-                margin-top: 15px;
-                flex-direction: column;
-            }
-
-            nav a {
-                margin: 10px 0;
-            }
-
-            .experience-image {
-                width: 80px; 
-                margin-left: 0;
-                display: block;
-                margin: 10px auto;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experience | Varisha Mohsin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f8;
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.7rem;
+      color: #333;
+    }
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+    nav a {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 0.4rem 0.6rem;
+      transition: all 0.3s ease;
+      border-radius: 6px;
+    }
+    nav a:hover {
+      background-color: #ffeff7;
+      color: #d63384;
+    }
+    nav img {
+      width: 18px;
+      height: 18px;
+    }
+    main {
+      flex-grow: 1;
+      max-width: 900px;
+      margin: 3rem auto 4rem;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .experience-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      transition: transform 0.2s;
+    }
+    .experience-card:hover {
+      transform: translateY(-5px);
+    }
+    .experience-card h3 {
+      font-size: 1.4rem;
+      color: #d63384;
+    }
+    .experience-card p,
+    .experience-card ul {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .experience-card ul {
+      padding-left: 1.2rem;
+      list-style-type: disc;
+    }
+    footer {
+      text-align: center;
+      padding: 1.2rem;
+      background: #fff;
+      border-top: 1px solid #eee;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        margin-top: 1rem;
+      }
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Varisha Mohsin ˖ . ݁𝜗𝜚. ݁₊</h1>
-        <nav>
-            <a href="index.html">
-                <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Home">Home
-            </a>
-            <a href="education.html">
-                <img src="https://cdn-icons-png.flaticon.com/512/3235/3235733.png" alt="Education">Education
-            </a>
-            <a href="skills.html">
-                <img src="https://png.pngtree.com/png-vector/20230412/ourmid/pngtree-key-skills-line-icon-vector-png-image_6703008.png" alt="Skills">Skills
-            </a>
-            <a href="projects.html">
-                <img src="https://cdn-icons-png.flaticon.com/512/2920/2920304.png" alt="Projects">Projects
-            </a>
-            <a href="experience.html">
-                <img src="https://cdn-icons-png.flaticon.com/512/3504/3504016.png" alt="Experience">Experience
-            </a>
-            <button id="modeToggle" aria-label="Toggle light/dark mode">
-                🌙
-            </button>
-        </nav>
-    </header>
+  <header>
+    <h1>Varisha Mohsin</h1>
+    <nav>
+      <a href="index.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Home" />Home
+      </a>
+      <a href="education.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/3235/3235733.png" alt="Education" />Education
+      </a>
+      <a href="skills.html">
+        <img src="https://png.pngtree.com/png-vector/20230412/ourmid/pngtree-key-skills-line-icon-vector-png-image_6703008.png" alt="Skills" />Skills
+      </a>
+      <a href="projects.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920304.png" alt="Projects" />Projects
+      </a>
+      <a href="experience.html" aria-current="page">
+        <img src="https://cdn-icons-png.flaticon.com/512/3504/3504016.png" alt="Experience" />Experience
+      </a>
+    </nav>
+  </header>
 
-    <div class="content-wrapper">
-        <section id="experience" class="content-section">
-            <h2>Computing Work Experience</h2>
-            <p><strong>Role:</strong> Work Experience at DV Telecom Service</p>
-            <p><strong>Duration:</strong> June 2022 - June 2022</p>
-            <p><strong>Responsibilities:</strong></p>
-            <ul>
-                <li>Explored network infrastructure and management.</li>
-                <li>Assisted in troubleshooting and optimizing network performance.</li>
-                <li>Documented and reported findings to senior engineers.</li>
-            </ul>
-        
-            <h2>Finance Work Experience</h2>
-            <p><strong>Role:</strong> Work Experience at AON</p>
-            <p><strong>Duration:</strong> July 2024 - July 2024</p>
-            <p><strong>Responsibilities:</strong></p>
-            <ul>
-                <li>Built an understanding of the company, through learning about the different sectors within Aon.</li>
-                <li>Sessions on networking, CV and interviewing skills, and personal branding.</li>
-                <li>Held a group presentation and presented it publicly.</li>
-            </ul>
-        </section>
-    </div>
-    
-    <footer>
-        <p>© Made with Javascript, HTML + CSS - ˏˋ°•*⁀➷ by Varisha</p>
-    </footer>
+  <main>
+    <article class="experience-card">
+      <h3>Computing Work Experience</h3>
+      <p><strong>Role:</strong> Work Experience at DV Telecom Service</p>
+      <p><strong>Duration:</strong> June 2022</p>
+      <p><strong>Responsibilities:</strong></p>
+      <ul>
+        <li>Explored network infrastructure and management.</li>
+        <li>Assisted in troubleshooting and optimizing network performance.</li>
+        <li>Documented and reported findings to senior engineers.</li>
+      </ul>
+    </article>
 
-    <script>
-        const toggleButton = document.getElementById('modeToggle');
-        const body = document.body;
-        const header = document.querySelector('header');
-        const footer = document.querySelector('footer');
-        const contentSection = document.querySelector('.content-section');
+    <article class="experience-card">
+      <h3>Finance Work Experience</h3>
+      <p><strong>Role:</strong> Work Experience at AON</p>
+      <p><strong>Duration:</strong> July 2021</p>
+      <p><strong>Responsibilities:</strong></p>
+      <ul>
+        <li>Supported financial analysts with data collection and analysis.</li>
+        <li>Learned about risk management and insurance processes.</li>
+        <li>Prepared reports and presentations for internal teams.</li>
+      </ul>
+    </article>
 
-        function applyMode(mode) {
-            if (mode === 'dark') {
-                body.classList.add('dark-mode');
-                header.classList.add('dark-mode');
-                footer.classList.add('dark-mode');
-                contentSection.classList.add('dark-mode');
-                toggleButton.textContent = '🌕'; 
-                localStorage.setItem('mode', 'dark');
-            } else {
-                body.classList.remove('dark-mode');
-                header.classList.remove('dark-mode');
-                footer.classList.remove('dark-mode');
-                contentSection.classList.remove('dark-mode');
-                toggleButton.textContent = '🌙'; 
-                localStorage.setItem('mode', 'light');
-            }
-        }
 
-        const savedMode = localStorage.getItem('mode');
-        applyMode(savedMode || 'light');
+  </main>
 
-        toggleButton.addEventListener('click', () => {
-            const isDarkMode = body.classList.contains('dark-mode');
-            applyMode(isDarkMode ? 'light' : 'dark');
-        });
-    </script>
+  <footer>
+    <p>© Made with ❤️ by Varisha</p>
+  </footer>
 </body>
 </html>
-
